@@ -26,14 +26,14 @@
                         <span>Entradas</span>
                         <img src="./assets/income.svg" alt="Ícone de Entrada">
                     </h3>
-                    <p id="incomeDisplay">R$ 5.000</p>
+                    <p id="incomeDisplay">R$ 0,00</p>
                 </div>
                 <div class="card">
                     <h3>
                         <span>Saídas</span>
                         <img src="./assets/expense.svg" alt="Ícone de Saída">
                     </h3>
-                    <p id="expenseDisplay">R$ 2.000</p>
+                    <p id="expenseDisplay">R$ 0,00</p>
                 </div>
             </div>
             <section id="balance2">
@@ -64,7 +64,34 @@
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onsubmit = "Form.submit(event)">
+                <div class="input-group">
+                   <fieldset>
+                       <p>Qual será o tipo de transação?</p>
+                       <div class="radio">
+                           <div class="radio1">
+                               <input 
+                               type="radio"
+                               name="transaction-type"
+                               id="transaction-type"
+                               value="income"
+                               checked>
+                               <label for="income">Entrada</label>
+                            </div>
+                            <div class="radio2">
+                                <input 
+                                type="radio"
+                                name="transaction-type"
+                                id="transaction-type"
+                                value="expense"
+                                >
+                                <label for="expense">Saída</label>
+                            </div>
+                        </div>
+                   </fieldset>
+                </div>
+                
+                </div>
                 <div class="input-group">
                     <label class="sr-only" for="description">Descrição</label>
                     <input
@@ -83,9 +110,7 @@
                         name="amount" 
                         placeholder="0,00"
                     />
-                    <small class="help">
-                        Use o sinal "-" (negativo) para despesas e "," (vírgula) para casas decimais.
-                    </small>
+                    
                 </div>
                 <div class="input-group">
                     <label class="sr-only" for="date" >Data</label>

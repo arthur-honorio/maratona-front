@@ -13,11 +13,12 @@
 }
 
 html {
-    font-size: 93,75%
+    font-size: 93,75%;
 }
 
 body
 {
+    min-width: 450px;
     background: #f0f2f5;
     font-family: "Poppins", sans-serif
 }
@@ -47,7 +48,7 @@ h2
     margin-top: 3.2rem;
     margin-bottom: 1.5rem;
     color: var(--dark-blue);
-
+    text-align: center;
     font-weight: normal;
 }
 
@@ -66,7 +67,7 @@ button {
     height: 30px;
 
     color: white;
-    background: var(--green);
+    background: var(--lightgreen);
 
     padding:0;
 
@@ -77,10 +78,16 @@ button {
 }
 
 button:hover {
-    background: var(--lightgreen)
+    background: var(--green)
 }
 
-.button new {
+.button income {
+    display:inline-block;
+    margin-bottom: .8rem;
+}
+
+.button expense {
+    color: var(--red);
     display:inline-block;
     margin-bottom: .8rem;
 }
@@ -182,7 +189,7 @@ header {
 
 .positive {
     color: var(--lightgreen);
-    border: 2px solid var(--green)
+    border: 2px solid var(--lightgreen)
 }
 
 .negative {
@@ -290,16 +297,59 @@ td.expense {
     margin-top: 0;
 }
 
-#form form input {
+input[type=number],
+input[type=date],
+input[type=text] {
     border: none;
     border-radius:.25rem;
+    margin-bottom:.4rem;
 
     padding:.4rem;
     width: 100%;    
 }
 
-.input-group {
-    padding:.15rem;
+fieldset {
+    display:block;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 1rem 2rem;
+    margin-bottom: .5rem;
+
+    border: none;
+    border-radius: .25rem;
+    
+    color: white;
+    background: var(--lightgreen);    
+}
+
+fieldset p {
+    display: block;
+    max-width: none;
+    text-align: center;
+    font-size: 90%;
+    margin-bottom: .3rem;
+}
+
+div.radio {
+    max-width: 180px;
+    display: flex;
+    margin: auto;
+}
+
+div.radio2 {
+    margin: 0 0 0 2rem;
+}
+
+.transaction {
+    display: flex;
+    margin: 0 0 0 1rem;
+    align-items: center;
+    font-size: 90%;
+}
+
+.transaction input {
+    margin: 0 1rem;
 }
 
 .input-group small {
@@ -390,5 +440,44 @@ footer {
         justify-content: space-evenly;
         height: 100px;
     }
-}
-   
+
+    fieldset {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        padding: 1rem 2.5rem;
+        margin-bottom: .5rem;
+
+        border: none;
+        border-radius: .25rem;
+        
+        color: white;
+        background: var(--lightgreen);  
+    }
+    
+    fieldset  p {
+        max-width: 120px;
+        margin: 0;
+        text-align: left;
+        font-size: 90%;
+    }
+    
+    div.radio {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        margin:0;
+    }
+    
+    div.radio1,
+    div.radio2 {
+        display: flex;
+        align-items: center;
+    }
+
+    input[type=radio] {
+        margin: 0 .3rem;
+    }
+    
+} 
